@@ -1,10 +1,10 @@
+import Recordplate from "../src/components/Recordplate";
 function App() {
-
-  return (
-    <>
-      
-    </>
-  )
+    return (
+        <>
+            <Recordplate></Recordplate>
+        </>
+    );
 }
 
-export default App
+export default App;
