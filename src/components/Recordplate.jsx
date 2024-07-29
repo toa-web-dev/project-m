@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-function Recordplate() {
+function Recordplate({ diameter }) {
     const rotate = keyframes`
     from {
       transform: rotate(0deg);
@@ -9,11 +9,10 @@ function Recordplate() {
       transform: rotate(360deg);
     }
   `;
-
     const Plate = styled.div`
         animation: ${rotate} 5s linear infinite;
-        width: 200px;
-        height: 200px;
+        width: ${(props) => props.$diameter}px;
+        height: ${(props) => props.$diameter}px;
         background-color: black;
         border-radius: 100%;
         display: flex;
@@ -21,8 +20,8 @@ function Recordplate() {
         align-items: center;
     `;
     const Label = styled.div`
-        width: 120px;
-        height: 120px;
+        width: 60%;
+        height: 60%;
         background-image: url(../../public/14947269.jpg);
         background-position: center;
         background-size: 100%;
@@ -41,13 +40,13 @@ function Recordplate() {
     `;
 
     return (
-        <>
-            <Plate>
+        <div>
+            <Plate $diameter={diameter}>
                 <Label>
                     <Centerhole></Centerhole>
                 </Label>
             </Plate>
-        </>
+        </div>
     );
 }
 export default Recordplate;
