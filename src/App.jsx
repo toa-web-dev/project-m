@@ -1,8 +1,8 @@
-import Recordplate from "../src/components/Recordplate";
+import RecordWrapper from "./components/RecordWrapper";
 function App() {
     return (
         <>
-            <Recordplate></Recordplate>
+            <RecordWrapper></RecordWrapper>
         </>
     );
 }
